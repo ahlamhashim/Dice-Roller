@@ -1,14 +1,17 @@
-function rollDice() {
-    // Generate a random number between 1 and 6
-    const diceRoll = Math.floor(Math.random() * 6) + 1;
-  
+async function rollDice() {
+  try {
+    // Call the backend API to get a random number
+    const response = await fetch('https://dicerollerbackend.azurewebsites.net/roll-dice'); // Use your backend URL
+    const data = await response.json();
+    const diceRoll = data.result; // Get the random number from the backend
+
     // Update the result text
     document.getElementById('result').textContent = `You rolled a ${diceRoll}`;
-  
+
     // Hide all dots first
     const allDots = document.querySelectorAll('.dot');
     allDots.forEach(dot => dot.style.display = 'none');
-  
+
     // Show the dots corresponding to the rolled number
     switch (diceRoll) {
       case 1:
@@ -45,5 +48,11 @@ function rollDice() {
         document.getElementById('dot6').style.display = 'block';  // Bottom-right
         break;
     }
+  } catch (error) {
+    console.error('Error fetching dice roll:', error);
+    document.getElementById('result').textContent = 'Failed to roll the dice. Please try again.';
   }
-  
+}
+
+// Add event listener to the roll button
+document.getElementById('roll-button').addEventListener('click', rollDice);
