@@ -1,17 +1,17 @@
 {
-  "name": "dice-roller-backend",
+  "name": "diceroller-backend",
   "version": "1.0.0",
   "description": "Backend for Dice Roller App",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "npm install && npm run build"
-  },
-  "engines": {
-    "node": "18.x"
+    "start": "node index.js",
+    "build": "echo 'No build step necessary'",
+    "test": "echo 'No tests specified' && exit 0"
   },
   "dependencies": {
     "express": "^4.18.2"
   },
-  "devDependencies": {}
+  "engines": {
+    "node": "18.x"
+  }
 }
