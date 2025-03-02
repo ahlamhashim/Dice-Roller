@@ -1,17 +1,22 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
+app.use(express.json());
 
-// API to roll a dice
-app.get('/roll-dice', (req, res) => {
-  const diceResult = Math.floor(Math.random() * 6) + 1; // Random number between 1 and 6
-  res.json({ result: diceResult });
+app.get('/', (req, res) => {
+    res.send('Welcome to DiceRollerBackend!');
 });
 
-// Start the server
+app.get('/roll', (req, res) => {
+    const diceRoll = Math.floor(Math.random() * 6) + 1;
+    res.json({ roll: diceRoll });
+});
+
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server running on port ${port}`);
 });
