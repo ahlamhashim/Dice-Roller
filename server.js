@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.get('/roll', (req, res) => {
     const diceRoll = Math.floor(Math.random() * 6) + 1;
-    res.json({ roll: diceRoll });
+    res.json({ result: diceRoll }); // Changed key to 'result'
 });
 
 app.listen(port, () => {
