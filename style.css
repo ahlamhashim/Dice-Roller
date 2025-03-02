@@ -8,18 +8,18 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-  }
-  
-  .container {
+}
+
+.container {
     text-align: center;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-  }
-  
-  .dice {
+}
+
+.dice {
     width: 100px;
     height: 100px;
     display: grid;
@@ -33,28 +33,28 @@ body {
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-  }
-  
-  /* Dot Styles */
-  .dot {
+}
+
+/* Dot Styles */
+.dot {
     width: 20px;
     height: 20px;
     background-color: black;
     border-radius: 50%;
     display: none; /* Initially hide all dots */
     position: absolute;
-  }
-  
-  /* Dot positions for each number (1-6) */
-  #dot1 { top: 10px; left: 10px; }  /* Top-left */
-  #dot2 { top: 10px; right: 10px; }  /* Top-right */
-  #dot3 { top: 50%; left: 50%; transform: translate(-50%, -50%); }  /* Center */
-  #dot4 { bottom: 10px; left: 10px; }  /* Bottom-left */
-  #dot5 { bottom: 10px; right: 10px; }  /* Bottom-right */
-  #dot6 { top: 50%; right: 10px; }  /* Middle-right */
-  
-  /* Roll Button */
-  .roll-button {
+}
+
+/* Dot positions for each number (1-6) */
+#dot1 { top: 10px; left: 10px; }  /* Top-left */
+#dot2 { top: 10px; right: 10px; }  /* Top-right */
+#dot3 { top: 50%; left: 50%; transform: translate(-50%, -50%); }  /* Center */
+#dot4 { bottom: 10px; left: 10px; }  /* Bottom-left */
+#dot5 { bottom: 10px; right: 10px; }  /* Bottom-right */
+#dot6 { top: 50%; right: 10px; }  /* Middle-right */
+
+/* Roll Button */
+.roll-button {
     padding: 10px 20px;
     font-size: 1.2rem;
     background-color: #333;
@@ -63,15 +63,14 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .roll-button:hover {
+}
+
+.roll-button:hover {
     background-color: #555;
-  }
-  
-  #result {
+}
+
+#result {
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
-  }
-  
+}
