@@ -1,7 +1,7 @@
 async function rollDice() {
   try {
     // Call the backend API to get a random number
-    const response = await fetch('https://dicerollerbackend.azurewebsites.net/roll-dice'); // Use your backend URL
+    const response = await fetch('https://dicerollerbackend.azurewebsites.net/roll'); // Corrected URL
     const data = await response.json();
     const diceRoll = data.result; // Get the random number from the backend
 
